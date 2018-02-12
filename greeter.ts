@@ -1,7 +1,11 @@
-function greeter(person: string) {
-    return "Hello, " + person;
+class Person{
+    constructor(public first:string, public second:string){
+    }
 }
 
-let user = "Jane User";
+function greeter(person: Person) {
+    return "Hello, " + person.first + " " + person.second;
+}
 
-document.body.innerHTML = greeter(user);
+let user = new Person("Satou","Tarou");
+console.log(greeter(user));
